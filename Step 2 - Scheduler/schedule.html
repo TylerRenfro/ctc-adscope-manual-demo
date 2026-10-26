@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Demo - AdScope</title>
+  <meta name="description" content="Optimize your Google Ads campaigns based on weather, time, device, and network conditions. Maximize ROI with intelligent automation." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS: turns classes like "text-white" and "rounded-full" into styles -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
+
+  <!-- Our own styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="antialiased">
+  <div class="min-h-screen bg-black">
+    <header class="bg-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+              <svg class="w-8 h-8 text-white" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" fill="none" />
+                <circle cx="12" cy="12" r="6" fill="none" />
+                <circle cx="12" cy="12" r="2" />
+                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-linecap="round" />
+              </svg>
+              <span class="text-xl font-medium text-white">AdScope</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section class="pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <p class="inline-block bg-pink-300/10 border border-pink-300/30 text-pink-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+              Free demo call
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              Book your AdScope demo
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+              Pick a time that works for you. We'll walk through your campaigns and show you what AdScope would change.
+            </p>
+          </div>
+
+          <ul class="mt-12 grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <li class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-pink-300/20 text-pink-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-white font-semibold text-lg">30 minutes</h2>
+                <p class="text-gray-400">A focused walkthrough of your campaigns</p>
+              </div>
+            </li>
+
+            <li class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-blue-500/20 text-blue-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-white font-semibold text-lg">Video call</h2>
+                <p class="text-gray-400">We'll email you a Zoom link</p>
+              </div>
+            </li>
+
+            <li class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-green-500/20 text-green-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-white font-semibold text-lg">Ad specialist</h2>
+                <p class="text-gray-400">Led by an AdScope ad specialist</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Booking card -->
+      <section class="pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="booking-card" class="bg-gray-900/50 rounded-xl border border-gray-700 scroll-mt-6">
+
+            <!-- Steps 1 and 2: pick a day, then a time -->
+            <div id="step-pick" class="grid md:grid-cols-[minmax(0,1fr)_20rem]">
+              <div class="p-6 sm:p-8">
+                <h2 class="flex items-center gap-3 text-lg font-semibold text-white mb-6">
+                  <span class="w-7 h-7 rounded-full bg-pink-300/20 text-pink-300 text-sm flex items-center justify-center">1</span>
+                  Pick a day
+                </h2>
+
+                <div class="flex items-center justify-between mb-4">
+                  <button type="button" id="prev-month" aria-label="Previous month"
+                    class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-800 hover:text-white transition-colors disabled:text-gray-600 disabled:hover:bg-transparent disabled:cursor-not-allowed">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <h3 id="month-label" class="text-white font-semibold"></h3>
+                  <button type="button" id="next-month" aria-label="Next month"
+                    class="w-9 h-9 rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-800 hover:text-white transition-colors disabled:text-gray-600 disabled:hover:bg-transparent disabled:cursor-not-allowed">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-7 text-center mb-2">
+                  <div class="text-xs font-medium text-gray-400 pb-2">Sun</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Mon</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Tue</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Wed</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Thu</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Fri</div>
+                  <div class="text-xs font-medium text-gray-400 pb-2">Sat</div>
+                </div>
+                <!-- The script fills in the days -->
+                <div id="calendar-days" class="grid grid-cols-7 gap-y-2 text-center"></div>
+              </div>
+
+              <div class="p-6 sm:p-8 border-t md:border-t-0 md:border-l border-gray-700 flex flex-col">
+                <h2 class="flex items-center gap-3 text-lg font-semibold text-white mb-6">
+                  <span class="w-7 h-7 rounded-full bg-pink-300/20 text-pink-300 text-sm flex items-center justify-center">2</span>
+                  Pick a time
+                </h2>
+
+                <!-- Shown until a day is picked -->
+                <div id="times-empty" class="flex-1 flex flex-col items-center justify-center text-center py-8 md:py-12">
+                  <svg class="w-10 h-10 text-gray-600 mb-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-gray-400">Pick a day to see open times.</p>
+                </div>
+
+                <!-- Shown once a day is picked. The script fills in the times. -->
+                <div id="times" hidden>
+                  <p id="times-day" class="text-white font-medium mb-4"></p>
+                  <div id="time-grid" class="grid grid-cols-2 gap-2"></div>
+                  <p id="times-zone" class="text-sm text-gray-400 mt-4"></p>
+                  <button type="button" id="continue" hidden
+                    class="mt-6 w-full bg-pink-300 text-black px-6 py-3 rounded-lg hover:bg-pink-200 transition-colors font-semibold">
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: confirm -->
+            <form id="step-confirm" hidden class="p-6 sm:p-8 max-w-xl mx-auto">
+              <h2 class="flex items-center gap-3 text-lg font-semibold text-white mb-6">
+                <span class="w-7 h-7 rounded-full bg-pink-300/20 text-pink-300 text-sm flex items-center justify-center">3</span>
+                Confirm your details
+              </h2>
+
+              <div class="flex items-start justify-between gap-4 bg-gray-900 border border-gray-700 rounded-lg p-4 mb-6">
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-pink-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                  </svg>
+                  <div>
+                    <p id="confirm-day" class="text-white font-medium"></p>
+                    <p id="confirm-time" class="text-gray-400 text-sm"></p>
+                  </div>
+                </div>
+                <button type="button" id="change-time" class="text-pink-300 hover:text-pink-200 text-sm font-medium transition-colors">
+                  Change
+                </button>
+              </div>
+
+              <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">
+                      First Name *
+                    </label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="John"
+                      class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-300 transition-colors" />
+                  </div>
+                  <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">
+                      Last Name *
+                    </label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Doe"
+                      class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-300 transition-colors" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                    Business Email *
+                  </label>
+                  <input type="email" id="email" name="email" required placeholder="john@company.com"
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-300 transition-colors" />
+                </div>
+
+                <button type="submit" class="w-full bg-pink-300 text-black px-8 py-4 rounded-lg hover:bg-pink-200 transition-colors font-semibold text-lg">
+                  Confirm booking
+                </button>
+              </div>
+            </form>
+
+            <!-- Shown after confirming -->
+            <div id="step-booked" hidden class="p-8 sm:p-12 text-center">
+              <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-white mb-4">You're booked</h2>
+              <p id="booked-day" class="text-white text-lg font-medium"></p>
+              <p id="booked-time" class="text-gray-300 mb-6"></p>
+              <p class="text-gray-300 mb-8">
+                We'll email a calendar invite to <span id="booked-email" class="text-white"></span>.
+              </p>
+              <a href="index.html" class="inline-block bg-pink-300 text-black px-6 py-3 rounded-lg hover:bg-pink-200 transition-colors font-medium">
+                Back to home
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-4">
+              Can't find a time that works?
+            </h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+              Get in touch and we'll set up a call around your schedule.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-700">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-pink-300/20 text-pink-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-gray-400 text-sm font-medium mb-1">Email</h3>
+              <a href="mailto:hello@adscope.example" class="text-white font-medium hover:text-pink-300 transition-colors">
+                hello@adscope.example
+              </a>
+            </div>
+
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-700">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-500/20 text-blue-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-gray-400 text-sm font-medium mb-1">Phone</h3>
+              <a href="tel:+13035550142" class="text-white font-medium hover:text-pink-300 transition-colors">
+                (303) 555-0142
+              </a>
+            </div>
+
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-700">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-green-500/20 text-green-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-gray-400 text-sm font-medium mb-1">Hours</h3>
+              <p class="text-white font-medium">Weekdays, 8 AM to 6 PM MT</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-12">
+          <div class="flex justify-center">
+            <div class="flex flex-col items-center space-y-4">
+              <a href="index.html" class="flex items-center space-x-3">
+                <svg class="w-8 h-8 text-white" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" fill="none" />
+                  <circle cx="12" cy="12" r="6" fill="none" />
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-linecap="round" />
+                </svg>
+                <span class="text-xl font-medium">AdScope</span>
+              </a>
+
+              <p class="text-gray-400 text-center max-w-md">
+                Intelligent ad campaign management that automatically optimizes your Google Ads
+                based on weather, time, device, and network conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // There's no server or calendar behind this page. The open days and taken times come
+    // from a fixed rule so the scheduler looks real, and confirming just swaps in the
+    // "You're booked" message. Nothing is booked for real.
+
+    const BOOKING_WINDOW_DAYS = 30;
+    const FIRST_CALL_HOUR = 9;
+    const CALLS_PER_DAY = 16; // 9:00 AM to 4:30 PM
+    const CALL_MINUTES = 30;
+
+    const monthFormat = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+    const dayFormat = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    const timeFormat = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+
+    // Days are midnight in the visitor's own time zone.
+    function addDays(date, days) {
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate() + days);
+    }
+
+    function firstOfMonth(date) {
+      return new Date(date.getFullYear(), date.getMonth(), 1);
+    }
+
+    function isWeekend(date) {
+      return date.getDay() === 0 || date.getDay() === 6;
+    }
+
+    function isSameDay(a, b) {
+      return a.toDateString() === b.toDateString();
+    }
+
+    // The long name of the visitor's time zone on a given day, like "Mountain Daylight Time".
+    function timeZoneName(date) {
+      return new Intl.DateTimeFormat('en-US', { timeZoneName: 'long' })
+        .formatToParts(date)
+        .find((part) => part.type === 'timeZoneName').value;
+    }
+
+    // Like "9:00 AM – 9:30 AM, Mountain Daylight Time"
+    function formatTimeRange(start) {
+      const end = new Date(start.getTime() + CALL_MINUTES * 60 * 1000);
+      return `${timeFormat.format(start)} – ${timeFormat.format(end)}, ${timeZoneName(start)}`;
+    }
+
+    // Open days are weekdays from tomorrow through 30 days from today.
+    const today = addDays(new Date(), 0);
+    let firstOpenDay = addDays(today, 1);
+    while (isWeekend(firstOpenDay)) firstOpenDay = addDays(firstOpenDay, 1);
+    let lastOpenDay = addDays(today, BOOKING_WINDOW_DAYS);
+    while (isWeekend(lastOpenDay)) lastOpenDay = addDays(lastOpenDay, -1);
+
+    function isOpenDay(date) {
+      return !isWeekend(date) && date >= firstOpenDay && date <= lastOpenDay;
+    }
+
+    // Times run every 30 minutes. A time is taken when the day of the month plus the
+    // time's position in the list (starting at 0) is divisible by 3.
+    function getTimeSlots(day) {
+      return Array.from({ length: CALLS_PER_DAY }, (_, index) => ({
+        start: new Date(day.getFullYear(), day.getMonth(), day.getDate(), FIRST_CALL_HOUR, index * CALL_MINUTES),
+        taken: (day.getDate() + index) % 3 === 0,
+      }));
+    }
+
+    const card = document.getElementById('booking-card');
+    const steps = {
+      pick: document.getElementById('step-pick'),
+      confirm: document.getElementById('step-confirm'),
+      booked: document.getElementById('step-booked'),
+    };
+    const monthLabel = document.getElementById('month-label');
+    const prevMonth = document.getElementById('prev-month');
+    const nextMonth = document.getElementById('next-month');
+    const calendarDays = document.getElementById('calendar-days');
+    const timesEmpty = document.getElementById('times-empty');
+    const times = document.getElementById('times');
+    const timeGrid = document.getElementById('time-grid');
+    const continueButton = document.getElementById('continue');
+
+    let month = firstOfMonth(firstOpenDay);
+    let selectedDay = null;
+    let selectedTime = null;
+    let dayButtons = [];
+    let timeButtons = [];
+
+    // Show the month's days as buttons. Only open days can be picked.
+    function showMonth() {
+      monthLabel.textContent = monthFormat.format(month);
+      prevMonth.disabled = month.getTime() === firstOfMonth(firstOpenDay).getTime();
+      nextMonth.disabled = month.getTime() === firstOfMonth(lastOpenDay).getTime();
+
+      calendarDays.replaceChildren();
+      dayButtons = [];
+
+      // Blank cells so the 1st lands under the right weekday
+      for (let i = 0; i < month.getDay(); i++) {
+        calendarDays.append(document.createElement('div'));
+      }
+
+      const daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
+      for (let dayNumber = 1; dayNumber <= daysInMonth; dayNumber++) {
+        const date = new Date(month.getFullYear(), month.getMonth(), dayNumber);
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = dayNumber;
+        button.disabled = !isOpenDay(date);
+        button.setAttribute('aria-label', dayFormat.format(date));
+        button.addEventListener('click', () => pickDay(date));
+        calendarDays.append(button);
+        dayButtons.push({ button, date });
+      }
+
+      paintDays();
+    }
+
+    // Color each day: pink fill when picked, pink tint when open, gray when it can't be picked.
+    function paintDays() {
+      for (const { button, date } of dayButtons) {
+        const isSelected = selectedDay !== null && isSameDay(date, selectedDay);
+        button.setAttribute('aria-pressed', isSelected);
+        button.className = 'mx-auto w-10 h-10 rounded-full flex items-center justify-center text-sm transition-colors ' + (
+          isSelected ? 'bg-pink-300 text-black font-semibold'
+          : button.disabled ? 'text-gray-600 cursor-not-allowed'
+          : 'bg-pink-300/10 text-pink-300 font-semibold hover:bg-pink-300/20'
+        );
+      }
+    }
+
+    function pickDay(date) {
+      selectedDay = date;
+      selectedTime = null;
+      paintDays();
+      showTimes();
+    }
+
+    // Show the picked day's times as buttons. Taken times can't be picked.
+    function showTimes() {
+      timesEmpty.hidden = true;
+      times.hidden = false;
+      document.getElementById('times-day').textContent = dayFormat.format(selectedDay);
+      document.getElementById('times-zone').textContent = `Times are in ${timeZoneName(selectedDay)}`;
+
+      timeGrid.replaceChildren();
+      timeButtons = [];
+
+      for (const slot of getTimeSlots(selectedDay)) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = timeFormat.format(slot.start);
+        button.disabled = slot.taken;
+        button.addEventListener('click', () => pickTime(slot.start));
+        timeGrid.append(button);
+        timeButtons.push({ button, start: slot.start });
+      }
+
+      paintTimes();
+    }
+
+    function paintTimes() {
+      for (const { button, start } of timeButtons) {
+        const isSelected = selectedTime !== null && selectedTime.getTime() === start.getTime();
+        button.setAttribute('aria-pressed', isSelected);
+        button.className = 'py-2.5 rounded-lg border text-sm font-medium transition-colors ' + (
+          isSelected ? 'bg-pink-300 border-pink-300 text-black'
+          : button.disabled ? 'border-gray-800 text-gray-600 cursor-not-allowed'
+          : 'border-gray-600 text-white hover:border-pink-300'
+        );
+      }
+      continueButton.hidden = selectedTime === null;
+    }
+
+    function pickTime(start) {
+      selectedTime = start;
+      paintTimes();
+    }
+
+    // Show one step of the card and hide the others.
+    function goTo(step) {
+      for (const [name, panel] of Object.entries(steps)) {
+        panel.hidden = name !== step;
+      }
+      // On phones the card is taller than the screen, so bring its top back into view.
+      if (card.getBoundingClientRect().top < 0) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    prevMonth.addEventListener('click', () => {
+      month = new Date(month.getFullYear(), month.getMonth() - 1, 1);
+      showMonth();
+    });
+
+    nextMonth.addEventListener('click', () => {
+      month = new Date(month.getFullYear(), month.getMonth() + 1, 1);
+      showMonth();
+    });
+
+    continueButton.addEventListener('click', () => {
+      document.getElementById('confirm-day').textContent = dayFormat.format(selectedDay);
+      document.getElementById('confirm-time').textContent = formatTimeRange(selectedTime);
+      goTo('confirm');
+    });
+
+    document.getElementById('change-time').addEventListener('click', () => goTo('pick'));
+
+    steps.confirm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.getElementById('booked-day').textContent = dayFormat.format(selectedDay);
+      document.getElementById('booked-time').textContent = formatTimeRange(selectedTime);
+      document.getElementById('booked-email').textContent = document.getElementById('email').value;
+      goTo('booked');
+    });
+
+    showMonth();
+  </script>
+</body>
+</html>
